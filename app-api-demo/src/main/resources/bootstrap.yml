@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: app-api-demo
+  cloud:
+    config:
+      uri: http://configserver:8888
+
+encrypt:
+  failOnError: false
