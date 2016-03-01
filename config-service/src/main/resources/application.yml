@@ -7,7 +7,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/fooololo/mamahao-microservice.git
+          uri: https://github.com/fooololo/mamahao-microservice
           search-paths: [settings-repo]
 #          basedir: settings-repo
 

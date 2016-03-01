@@ -3,7 +3,7 @@ spring:
     name: app-api-demo
   cloud:
     config:
-      uri: http://configserver:8888
+      uri: http://localhost:8888
       name: app-api
       profile: ${config.profile:dev}
 
