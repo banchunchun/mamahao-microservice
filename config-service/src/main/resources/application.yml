@@ -9,6 +9,7 @@ spring:
         git:
           uri: https://github.com/fooololo/mamahao-microservice.git
           search-paths: [settings-repo]
+#          basedir: settings-repo
 
 eureka:
   client:
