@@ -7,8 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.cloud.context.environment.EnvironmentChangeEvent;
-import org.springframework.cloud.context.scope.refresh.RefreshScope;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
@@ -35,6 +35,7 @@ import java.util.*;
 @EnableFeignClients
 @EnableConfigurationProperties
 @EnableHystrix
+@RefreshScope
 //@EnableScheduling
 public class AppApiApplication{
 	public static void main(String[] args) {
@@ -46,7 +47,7 @@ public class AppApiApplication{
 	@Autowired
 	private ConfigurationPropertiesConfig configurationPropertiesConfig;
 	@Autowired
-	private RefreshScope scope;
+	private org.springframework.cloud.context.scope.refresh.RefreshScope scope;
 
 	private Set<String> standardSources = new HashSet<String>(Arrays.asList(
 			StandardEnvironment.SYSTEM_PROPERTIES_PROPERTY_SOURCE_NAME,
