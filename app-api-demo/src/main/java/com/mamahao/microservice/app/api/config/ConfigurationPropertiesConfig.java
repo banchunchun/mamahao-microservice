@@ -18,13 +18,5 @@ import org.springframework.stereotype.Component;
 @Configuration
 @ConfigurationProperties
 public class ConfigurationPropertiesConfig {
-    private String env;
 
-    public String getEnv() {
-        return env;
-    }
-
-    public void setEnv(String env) {
-        this.env = env;
-    }
 }

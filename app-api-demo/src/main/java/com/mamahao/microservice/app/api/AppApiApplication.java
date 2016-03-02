@@ -31,7 +31,7 @@ import java.util.*;
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-//@EnableEurekaClient
+@EnableEurekaClient
 @EnableFeignClients
 @EnableConfigurationProperties
 @EnableHystrix
@@ -59,7 +59,7 @@ public class AppApiApplication{
 	@Scheduled(cron="0/20 * *  * * ? ")   //每20秒执行一次
 	public void refreshConfigProperties(){
 		refresh();
-		System.out.println(configurationPropertiesConfig.getEnv());
+//		System.out.println(configurationPropertiesConfig.getEnv());
 	}
 
 	public void refresh() {
