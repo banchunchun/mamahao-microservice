@@ -35,7 +35,7 @@ import java.util.*;
 @EnableFeignClients
 @EnableConfigurationProperties
 @EnableHystrix
-@RefreshScope
+//@RefreshScope
 @EnableScheduling
 public class AppApiApplication{
 	public static void main(String[] args) {
