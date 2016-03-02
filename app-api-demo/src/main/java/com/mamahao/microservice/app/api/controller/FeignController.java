@@ -29,8 +29,8 @@ public class FeignController {
 
 	@RequestMapping(value = "/v2/users")
 	public List<User> users(){
-		System.out.printf("env=="+env);
-		System.out.printf("username=="+username);
+		System.out.println("env=="+env);
+		System.out.println("username=="+username);
 		List<User> users = userClient.findAll();
 		return users;
 	}

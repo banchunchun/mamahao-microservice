@@ -8,8 +8,7 @@ spring:
       name: app-api
       profile: ${config.profile:dev}
   rabbitmq:
-    addresses: localhost
-    port: 5672
+    addresses: amqp://localhost:5672
 
 encrypt:
   failOnError: false
