@@ -31,11 +31,11 @@ import java.util.*;
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableEurekaClient
+//@EnableEurekaClient
 @EnableFeignClients
 @EnableConfigurationProperties
 @EnableHystrix
-@EnableScheduling
+//@EnableScheduling
 public class AppApiApplication{
 	public static void main(String[] args) {
 		SpringApplication.run(AppApiApplication.class,args);
@@ -56,7 +56,7 @@ public class AppApiApplication{
 			StandardServletEnvironment.SERVLET_CONTEXT_PROPERTY_SOURCE_NAME));
 
 
-	@Scheduled(cron="0/20 * *  * * ? ")   //每20秒执行一次
+//	@Scheduled(cron="0/20 * *  * * ? ")   //每20秒执行一次
 	public void refreshConfigProperties(){
 		refresh();
 //		System.out.println(configurationPropertiesConfig.getEnv());

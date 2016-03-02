@@ -5,7 +5,9 @@ server:
 spring:
   cloud:
     config:
+      enabled: true
       server:
+        bootstrap: true
         git:
           uri: https://github.com/fooololo/mamahao-microservice
           search-paths: [settings-repo]
