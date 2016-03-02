@@ -1,11 +1,20 @@
 spring:
   application:
     name: configserver
-#  rabbitmq:
-#    host: localhost
-#    port: 5672
-#    username: gxl
-#    password: 123456
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: gxl
+    password: 123456
+  cloud:
+    config:
+      enabled: true
+      server:
+        bootstrap: true
+        git:
+          uri: https://github.com/fooololo/mamahao-microservice
+          search-paths: [settings-repo]
+#          basedir: settings-repo
 
 eureka:
   client:
