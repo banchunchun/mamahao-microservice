@@ -9,6 +9,8 @@ spring:
       profile: ${config.profile:dev}
   rabbitmq:
     addresses: amqp://localhost:5672
+    username: gxl
+    password: 123456
 
 encrypt:
   failOnError: false

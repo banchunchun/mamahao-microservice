@@ -1,3 +1,8 @@
 spring:
   application:
     name: discoveryserver
+#  rabbitmq:
+#    host: localhost
+#    port: 5672
+#    username: gxl
+#    password: 123456

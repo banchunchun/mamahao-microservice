@@ -13,9 +13,3 @@ spring:
           search-paths: [settings-repo]
 #          basedir: settings-repo
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-  instance:
-    preferIpAddress: true
