@@ -7,10 +7,10 @@ spring:
       uri: http://localhost:8888
       name: app-api
       profile: ${config.profile:dev}
-#  rabbitmq:
-#    addresses: amqp://localhost:5672
-#    username: gxl
-#    password: 123456
+  rabbitmq:
+    addresses: amqp://localhost:5672
+    username: gxl
+    password: 123456
 
 encrypt:
   failOnError: false
