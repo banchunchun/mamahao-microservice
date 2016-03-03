@@ -2,6 +2,7 @@ package com.mamahao.microservice.app.api.controller;
 
 import com.mamahao.microservice.app.api.model.User;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,6 +16,7 @@ import java.util.List;
  * Description    :
  */
 @RestController
+//@RefreshScope
 public class UseConfigController {
 	@Value("${env}")
 	String env;
