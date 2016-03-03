@@ -1,0 +1,37 @@
+#数据源配置
+spring:
+  datasource:
+    name: test
+    url: jdbc:mysql://172.28.1.6:3306/test?useUnicode=true&amp;characterEncoding=UTF-8&amp;allowMultiQueries=true&amp;rewriteBatchedStatements=true
+    username: root
+    password: mamahao
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+    schema: test.sql
+
+#mybatis配置
+#mybatis:
+#  mapper-locations: classpath*:mybatis/mapper/*.xml
+#  type-aliases-package: com.mamahao.microservice.user.manager.model
+#  config: classpath:mybatis/mybatis-config.xml
+#  type-handlers-package: com.mamahao.microservice.user.manager.model
+#  check-config-location: true
+#  executor-type: SIMPLE
+
+
+logging:
+    level:
+        tk.mybatis: DEBUG

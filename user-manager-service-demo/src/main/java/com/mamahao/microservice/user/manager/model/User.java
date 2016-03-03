@@ -1,7 +1,5 @@
 package com.mamahao.microservice.user.manager.model;
 
-import org.springframework.data.neo4j.annotation.GraphId;
-import org.springframework.data.neo4j.annotation.NodeEntity;
 
 /**
  * Company        :   mamahao.com
@@ -10,9 +8,7 @@ import org.springframework.data.neo4j.annotation.NodeEntity;
  * Time           :   16:16
  * Description    :
  */
-@NodeEntity
 public class User {
-	@GraphId
 	private Long id;
 	private String username;
 

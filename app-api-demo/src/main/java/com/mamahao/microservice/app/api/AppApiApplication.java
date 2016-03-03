@@ -12,6 +12,7 @@ import org.springframework.cloud.context.environment.EnvironmentChangeEvent;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
+import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Configuration;
@@ -31,12 +32,13 @@ import java.util.*;
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-//@EnableEurekaClient
+@EnableEurekaClient
 @EnableFeignClients
 @EnableConfigurationProperties
 @EnableHystrix
 //@RefreshScope
 @EnableScheduling
+@EnableHystrixDashboard
 public class AppApiApplication{
 	public static void main(String[] args) {
 		SpringApplication.run(AppApiApplication.class,args);

@@ -1,6 +1,26 @@
+server:
+  port: 8761
+
 spring:
   application:
-    name: discoveryserver
+      name: discoveryserver
+  cloud:
+    config:
+      discovery:
+        enabled: true
+
+
+eureka:
+  instance:
+    hostname: localhost #eureka主机名
+  client:
+    register-with-eureka: false #eureka是否注册自己
+    fetch-registry: false #eureka是否从eureka获取注册信息
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ #eureka主机名
+
+
+
 #  rabbitmq:
 #    host: localhost
 #    port: 5672
