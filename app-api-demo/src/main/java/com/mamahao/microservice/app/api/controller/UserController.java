@@ -20,7 +20,7 @@ import java.util.List;
 public class UserController {
 	@Autowired
 	UserService userService;
-	@RequestMapping(value = "/users")
+	@RequestMapping(value = "/v1/users")
 	public List<User> users(){
 		List<User> users = userService.findAll();
 		return users;
