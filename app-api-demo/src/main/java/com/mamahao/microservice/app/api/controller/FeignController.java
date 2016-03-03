@@ -1,9 +1,8 @@
 package com.mamahao.microservice.app.api.controller;
 
-import com.mamahao.microservice.app.api.client.UserClient;
+import com.mamahao.microservice.app.api.client.UserServiceClient;
 import com.mamahao.microservice.app.api.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,8 +19,7 @@ import java.util.List;
 @RestController
 @RefreshScope
 public class FeignController {
-	@Autowired
-	UserClient userClient;
+	@Autowired UserServiceClient userClient;
 
 
 	@RequestMapping(value = "/v2/users")

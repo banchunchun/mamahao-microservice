@@ -15,7 +15,7 @@ import java.util.List;
  * Description    :
  */
 @FeignClient("user-manager-service-demo")
-public interface UserClient {
+public interface UserServiceClient {
 	@RequestMapping(value = "/users",method = RequestMethod.GET)
 	List<User> findAll();
 }
