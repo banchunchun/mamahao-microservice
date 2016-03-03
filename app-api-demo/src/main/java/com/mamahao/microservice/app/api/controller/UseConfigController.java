@@ -16,7 +16,7 @@ import java.util.List;
  * Description    :
  */
 @RestController
-//@RefreshScope
+@RefreshScope
 public class UseConfigController {
 	@Value("${env}")
 	String env;
