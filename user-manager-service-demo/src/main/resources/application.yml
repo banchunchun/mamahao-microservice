@@ -1,6 +1,0 @@
-server:
-  port: 9005
-
-ribbon:
-  eureka:
-    enabled: true

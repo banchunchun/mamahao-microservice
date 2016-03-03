@@ -22,7 +22,7 @@ public class FeignController {
 	@Autowired UserServiceClient userClient;
 
 
-	@RequestMapping(value = "/v2/users")
+	@RequestMapping(value = "/feign/users")
 	public List<User> users(){
 		List<User> users = userClient.findAll();
 		return users;
